@@ -1,0 +1,62 @@
+1.Chạy lệnh script create-artifacts.sh để hệ thống sinh các file cần thiết…
+export PATH=$PATH:/home/nvhquang/fabric-samples/bin
+./create-artifacts.sh
+
+2. Network Up. Running service
+sudo chown $USER /var/run/docker.sock
+docker-compose up -d
+
+3. Create Channel:
+export PATH=$PATH:/home/nvhquang/fabric-samples/bin
+Chạy lệnh 
+./createChannel.sh
+
+
+4. Chạy lệnh 
+./deployChaincode.sh
+
+##############################
+Xóa golang:
+sudo apt policy golang
+sudo apt-get remove golang-go
+sudo apt-get remove --auto-remove golang-go
+sudo apt-get purge golang-go
+Cài golang:
+wget https://dl.google.com/go/go1.15.linux-amd64.tar.gz
+sudo tar -xvf go1.15.linux-amd64.tar.gz
+Gán quyền:
+nvhquang@ubuntu:~/BasicNetwork-2.0$ sudo chown -R root:root ./go
+nvhquang@ubuntu:~/BasicNetwork-2.0$ sudo mv go /usr/local
+nvhquang@ubuntu:~/BasicNetwork-2.0$ export GOPATH=$HOME/go
+nvhquang@ubuntu:~/BasicNetwork-2.0$ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+nvhquang@ubuntu:~/BasicNetwork-2.0$ source ~/.profile
+ 
+ 
+ 
+
+Xem lại cách đóng gói chaincode:
+https://hyperledger-fabric.readthedocs.io/pt/latest/deploy_chaincode.html:
+https://golang.org/doc/code.html
+go mod init github.com/benhsoi/go
+go install github.com/benhsoi/go
+
+ Coi kỹ cấu hình mạng Endorsement:
+ 
+
+https://stackoverflow.com/questions/64461308/hyperledger-fabric-2-0-chaincode-commit-fails-with-the-error-chaincode-defin
+
+https://www.youtube.com/watch?v=9_xC4CHc8go&list=PLSBNVhWU6KjW4qo1RlmR7cvvV8XIILub6&index=14
+
+
+https://www.youtube.com/watch?v=vRxbVhRrd1k&list=PLSBNVhWU6KjW4qo1RlmR7cvvV8XIILub6&index=22
+
+
+Cài nodeman cho API:
+npm uninstall nodemon
+
+sudo npm uninstall -g nodemon
+sudo npm install -g --force nodemon
+
+
+Cách gỡ và cài go version:
+https://khongwooilee.medium.com/how-to-update-the-go-version-6065f5c8c3ec
