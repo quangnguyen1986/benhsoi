@@ -1,0 +1,70 @@
+#install curl and the golang package
+sudo apt-get install curl
+sudo apt-get install golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# có thể kiểm tra lại biên export bằng lệnh
+sudo apt install vim
+vim ~/.bashrc
+
+#Install Node.js npm Python
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo apt-get install python
+
+#Install adn upgrade docker and docker-compose
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+apt-cache policy docker-ce
+sudo apt-get install -y docker-ce
+sudo apt-get install docker-compose
+sudo apt-get upgrade
+
+#update Node.js and golang to the proeper versions:
+# tham khao golang install https://www.systutorials.com/how-to-install-go-1-13-x-on-ubuntu-18-04/
+wget https://dl.google.com/go/go1.13.9.linux-amd64.tar.gz
+tar xf go1.13.9.linux-amd64.tar.gz
+sudo mv go /usr/local/go-1.13
+export GOPATH=/usr/local/go-1.13
+export PATH=$GOPATH/bin:$PATH
+curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+sudo apt-get install -y nodejs
+
+
+# lệnh kiểm tra version các gói
+curl -V
+npm -v
+docker version
+docker-compose version
+go version
+python -V
+node -v
+
+# cài đặt fabric
+sudo chown $USER /var/run/docker.sock
+curl -sSL https://bit.ly/2ysbOFE | bash -s
+#curl sSL https://bit.ly/2ysbOFE | bash -s - fabric_version fabric-ca_version thirdparty_version
+#curl sSL https://bit.ly/2ysbOFE | bash -s - 2.0.1 1.4.6 0.4.18
+
+#export PARTH to fabric
+nvhquang@ubuntu:~/test/BasicNetwork-2.0/artifacts/channel$ export PATH=$PATH:/home/nvhquang/fabric-samples/bin
+
+
+#download test network
+git clone https://github.com/adhavpavan/BasicNetwork-2.0.git
+
+#download explorer
+git clone https://github.com/adhavpavan/ContainerisingBlockchainExplorer.git
+
+
+
+
+####lenhlinux:
+36706055
+
+
+
+
+
