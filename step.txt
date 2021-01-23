@@ -15,6 +15,9 @@ Chạy lệnh
 4. Chạy lệnh 
 ./deployChaincode.sh
 
+5. API start
+npm start
+
 ##############################
 Xóa golang:
 sudo apt policy golang
